@@ -15,7 +15,7 @@ const io = socketIO(server, {
   cors: {
     origin: [
       "http://localhost:3000",
-      "https://flatmate-finder-zhzz.vercel.app/",
+      "https://flatmate-finder-zhzz.vercel.app",
     ],
     methods: ["GET", "POST"],
     credentials: true,
