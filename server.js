@@ -18,11 +18,21 @@ const io = socketIO(server, {
       "https://flatmate-finder-zhzz.vercel.app/",
     ],
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://flatmate-finder-zhzz.vercel.app",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // MongoDB connection
